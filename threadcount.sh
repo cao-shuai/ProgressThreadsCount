@@ -9,7 +9,7 @@ while [[ 1 ]]; do
 	do
 		#statements
 		#echo $progresspid;
-		count=$(ps -t -p $progresspid |busybox wc -l);
+		count=$(ps -A -T -p $progresspid |busybox wc -l);
 		counts=$((counts+count));
 	done
 	echo "current thread count is: "$counts
